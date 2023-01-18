@@ -29,7 +29,7 @@ router.put('/:id', async function (req, res, next) {
             "stage": body.stage,
             "title": body.title
         }
-        await controller.update(board)
+        await controller.update(board,{id : id})
         res.status(200)
         res.send(board);
     }else{
