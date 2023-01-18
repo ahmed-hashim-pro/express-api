@@ -1,5 +1,5 @@
 const Boards = require('../models/boards');
-
+module.exports = Boards;
 /**
  * Details about the stage
  * 1: TODO
