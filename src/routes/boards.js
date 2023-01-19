@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const controller = require('../controllers/boards');
 
-
-
 /* Post . */
 router.post('/', async function (req, res, next) {
     let body = req.body
@@ -17,10 +15,10 @@ router.post('/', async function (req, res, next) {
     res.send(board);
 });
 
-
 /* Put . */
 router.put('/:id', async function (req, res, next) {
-    let id = req.id
+
+    let id = req.params.id
     let body = req.body
 
     if (body.stage === 1 || body.stage === 2 || body.stage === 3){
@@ -30,17 +28,15 @@ router.put('/:id', async function (req, res, next) {
             "title": body.title
         }
         await controller.update(board,{where :{id : id}})
+
         res.status(200)
-        res.send(board);
+        let ssf = await controller.findOne({id:id},{where :{id : id}})
+        res.send(ssf);
     }else{
         res.status(400).send()
-
     }
 
 
 });
-
-
-
 
 module.exports = router;
