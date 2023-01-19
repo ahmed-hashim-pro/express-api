@@ -1,4 +1,4 @@
-# Kanban Board API
+# Kanban Board API - Express Api Example
 
 ## Data:
 Example of a repo data JSON object:
@@ -45,15 +45,37 @@ You should complete the given project so that it passes all the test cases when 
 - `test/*`
 
 **Commands**
-- run: 
-```bash
-bash bin/env_setup && . $HOME/.nvm/nvm.sh && npm start
-```
+
 - install: 
 ```bash
-bash bin/env_setup && . $HOME/.nvm/nvm.sh && npm install
+npm install
 ```
+- dev server:
+```bash
+ npm dev
+```
+
+- start:
+```bash
+ npm start
+```
+
+- build production:
+```bash
+ npm build
+```
+
+- start production:
+```bash
+ npm start:production
+```
+
 - test: 
 ```bash
 bash bin/env_setup && . $HOME/.nvm/nvm.sh && npm test
+```
+
+- run:
+```bash
+bash bin/env_setup && . $HOME/.nvm/nvm.sh && npm start
 ```
